@@ -1,13 +1,10 @@
-# myo-nintendo-switch
+# myo-control
 
 ### Usage:
 
 ```
 pip install pyomyo==0.0.2
-pip install nxbt
 ```
-
-Note: NXBT needs root privileges to toggle the BlueZ Input plugin.
 
 ### 1. Gathering Training Data:
 
@@ -15,11 +12,12 @@ You can gather training data by running `python3 neuro_training_3.py`.
 The first phase involves following the paddle with your hand. The second phase involves opening and closing your fist. This will run for a default of 4 minutes before saving it to `foo.csv` and `bar.csv`.  
 **Note that sEMG data, the same kind gathered by the Myo is thought to be uniquely identifiable. Do not share this data without careful consideration of the future implications.**
 
-### 2. Start TUI interface
+### 2. Start interface
 
 ```
 sudo python3 tui_for_myo.py --ip <ip address> --port <port number>
 ```
+Replace this with your connection script to the other end (e.g., Lunar Lander).
 
 ### 3. Run Myo Control
 
@@ -29,9 +27,11 @@ In another terminal in parallel, start the myo connection script
 python3 myo_regression.py --ip <ip address> --port <port number>
 ```
 
-### 4. Control the Switch
+### 4. Example: Control the Switch (script not included here)
 
 You may use the keyboard interface to navigate throughout the Nintendo Switch. Once you would like to toggle EMG control, press e.
+
+[myo-nintendo-switch](https://github.com/jasontchan/myo-nintendo-switch) 
 
 ![IMG_7501 (1)](https://github.com/user-attachments/assets/0dfd171a-9783-4489-a007-4ff98b251c01)
 
